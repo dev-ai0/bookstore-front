@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'bs-book-detail',
@@ -13,11 +14,16 @@ export class BookDetailComponent implements OnInit {
     unitCost: "123",
     isbn: "123-3456-567",
     nbOfPages: "456",
-    Language: "English"
+    language: "English"
   }
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  delete(){
+    // invoke rest API delete
+    this.router.navigate(['/book-list']);
   }
 
 }
