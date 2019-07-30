@@ -15,7 +15,7 @@ export class BookFormComponent implements OnInit {
     id: number;
     imageUrl: string;
     isbn: string;
-    language: Book.LanguageEnum;
+    language: string;
     nbOfPages: number;
     publicationDate: Date;
     title: string;
